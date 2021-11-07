@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme change rehearsal in HTML5, with LocalStorage</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+    <div class="card">
+        <h2>Click button to change theme</h2>
+    </div>
+
+    <button id="theme_toggler">
+      Change theme
+    </button>
+    
+
+<script>
+
+    //creates variable and stores button-id. 
+    let theme_toggler = document.querySelector('#theme_toggler');
+
+    //eventlistener that runs function when user presses button. 
+    theme_toggler.addEventListener('click', function(){ 
+
+        //switches from :root to "dark" in class
+        document.body.classList.toggle('dark_mode');
+
+
+        
+
+    });
+
+                        // Key              Value
+    localStorage.setItem('website_theme', 'dark_mode');
+
+
+</script>
+
+</body>
+
+
+
+</html>
